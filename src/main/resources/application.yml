@@ -1,0 +1,15 @@
+server:
+  port: ${SERVER_PORT:8083}
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/employee?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${DB_USER:portfolio}
+    password: ${DB_PASSWORD:portfolio-local-only}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
